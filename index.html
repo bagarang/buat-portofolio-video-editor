@@ -61,15 +61,14 @@
 
         /* --- 3. HERO SECTION --- */
         .hero {
-            height: 100vh;
+            min-height: 100vh; /* Diubah ke min-height agar fleksibel jika logo tinggi */
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 100px 20px 50px; /* Padding atas ditambah agar tidak tertutup navbar */
             position: relative;
             background-color: #101519;
-            margin-top: 0;
         }
 
         .hero-content {
@@ -80,11 +79,14 @@
             align-items: center;
         }
 
+        /* --- PERUBAHAN CSS DISINI --- */
         .hero-logo {
-            width: 150px;
+            width: 360px; /* Target ukuran 360P (pixel width) */
+            max-width: 90vw; /* Penjaga agar tidak melebihi lebar layar HP kecil */
             height: auto;
             margin-bottom: 30px;
         }
+        /* --------------------------- */
 
         .hero h1 {
             font-size: 3.5rem;
@@ -331,7 +333,12 @@
             nav ul { display: none; }
             .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1rem; }
-            .hero-logo { width: 100px; }
+            
+            /* --- PERUBAHAN RESPONSIVE UNTUK LOGO BARU --- */
+            /* Ukuran di mobile diperbesar sedikit dari 100px menjadi 260px agar GIF terlihat jelas */
+            .hero-logo { width: 260px; } 
+            /* ------------------------------------------- */
+            
             .section-title { font-size: 1.8rem; margin-bottom: 40px; }
             .about-section { padding: 80px 20px; }
         }
@@ -355,7 +362,7 @@
 
     <section class="hero">
         <div class="hero-content">
-            <img src="https://i.imgur.com/sifkHi1.jpeg" alt="Logo Utama" class="hero-logo">
+            <img src="https://i.imgur.com/yQH1MOz.gif" alt="Logo Utama Animasi" class="hero-logo">
             <h1>Visual Storytelling</h1>
             <p>Menghadirkan narasi visual yang kuat melalui sinematografi dan editing berkelas.</p>
             <a href="#portfolio" class="cta-button">Lihat Karya</a>
@@ -555,6 +562,3 @@
 
 </body>
 </html>
-
-
-
